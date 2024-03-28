@@ -1,0 +1,12 @@
+@use "mixins" as m;
+
+.hover-effect {
+  @apply block;
+  @apply hover:text-primary;
+  @include m.after {
+    @apply block bg-primary;
+    @apply h-[3px] w-full;
+    @apply scale-x-0 hover:scale-x-100;
+    @apply transition-all duration-300 origin-left
+  }
+}

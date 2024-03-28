@@ -1,0 +1,33 @@
+@mixin before($content:'') {
+  @apply relative;
+  &::before {
+    content: $content;
+    @apply absolute;
+    @content;
+  }
+}
+
+@mixin after($content:'') {
+  @apply relative;
+  &::after {
+    content: $content;
+    @apply absolute;
+    @content;
+  }
+}
+
+@mixin hover-primary {
+  @apply hover:text-primary transition-colors
+}
+
+
+@mixin flex-center {
+  @apply flex;
+  @apply items-center;
+}
+
+@mixin flex-between {
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+}
